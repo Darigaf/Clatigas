@@ -1,0 +1,56 @@
+@font-face{
+	font-family: "Poppins";
+	src: url("assets/fonts/poppins/Poppins-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face{
+	font-family: "Poppins_Bold";
+	src: url("assets/fonts/poppins/Poppins-Bold.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face{
+	font-family: "Poppins_Extra_Bold";
+	src: url("assets/fonts/poppins/Poppins-Extra-Bold.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+.text{
+	font-family: "Poppins", Arial, sans-serif;	
+}
+.global_header{
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #b21919;
+	padding: 10px 20px;
+	color: Black;
+}
+.main_bg{
+	opacity:0.2;
+}
+.title{
+	color: #b21919;
+	font-size: 4.0em;
+	font-family: "Poppins_Extra_Bold"; Arial, sans-serif;
+}
+.link_principal:link{
+	color: #b21919;
+}
+.link_principal:visited{
+	color: #9c1616;
+}
+.link_principal:hover{
+	color: #861313;
+}
+.link_principal:selected{
+	color: #b21919;
+}
+.centered{
+
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
