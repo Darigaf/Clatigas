@@ -6,20 +6,34 @@
 		a ser a melhor fonte para se pesquisar músicas escoteiras"
 		/>
 		<link href="styles/styles.css" rel="stylesheet" />
+		<link href="styles/icons.css" rel="stylesheet" />
 		<title>Projeto Clãtigas</title>
 	</head>
 	<body class="text">
 		<header class="global_header">
 			<div class="menu_container">
-				<button class="menu_hamburguer" aria-label="Menu">
-					&#9776;
-				</button>
+				<div class="hamburguer_button" id="hamburguer_button">
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+				</div>	
+				<nav class="hamburguer_menu" id="hamburguer_menu">
+					<ul>
+						<li><a href="">Inicio</a></li>
+						<li><a href="cancioneiro">Cancioneiro Completo</a></li>
+						<li><a href="sobre">Sobre</a></li>
+						<li><a href="login">Administração</a></li>
+					</ul>
+				</nav>
 			</div>	
-			<div class="account_container">
-				<a href="login">
-					<button class="account_button">Minha Conta</button>
-				</a>
-			</div>	
+			<div class="search_bar">
+				<form action="#">
+					<input type="text" placeholder"Pesquisar Músicas" name"search" type="submit">
+					<button type="submit">
+						<i class="icon_search"></i>
+					</button>
+				</form>
+			</div>
 		</header>
 
 
@@ -32,10 +46,12 @@
 				<p class="title">
 					Clãcioneiro
 					<br>
-					<a class="link_principal" href="projeto">descubra mais</a>
+					<a class="link_principal" onclick="goto_end()">descubra mais</button>
 				</p>
 			</div>
+			<
 		</div>
 		<p class="paragraphs">Mais Pesquisadas</p>
+		<script src="scripts/script.js"></script>
 	</body>
 </html>
