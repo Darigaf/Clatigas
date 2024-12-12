@@ -14,3 +14,14 @@ hamburguerButton.addEventListener('click', () => {
     hamburguerMenu.classList.toggle('show'); // Alterna a classe "show" no menu
 
 });
+
+const search_bar = document.getElementById('search_bar');
+
+const tags_bar= document.getElementById('tags_bar');
+
+
+search_bar.addEventListener('click', () => {
+
+    tags_bar.classList.toggle('show'); // Alterna a classe "show" no menu
+
+});
