@@ -65,7 +65,7 @@ html, body{
     align-items: center;
 }
 
-.search_bar input[type="text"] {
+.search_bar input[type="search"] {
     padding: 10px;
     margin-right: 10px;
     border: none;
@@ -115,20 +115,32 @@ html, body{
     transition: all 0.3s ease;
 }
 .hamburguer_menu {
-	display: none; /* Esconde o menu por padrão */
-	position: absolute;
-	background-color: #b21919;
-	border: 0px solid black;
-	border-radius: 0px;
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-	position:absolute;
-	top: 14%;
-	bottom: 0%;
-	left: 0.0%;
-	right: 80%; /* Ajuste conforme necessário */
-	transform: translate(-2.5%, -9%);
-	z-index:5;
+    position: absolute;
+    background-color: #b21919;
+    border: 0px solid black;
+    border-radius: 0px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    top: 7.6%;
+    bottom: 0%;
+    left: 0.0%;
+    right: 80%;
+    transform: translate(-2.5%, -9%);
+    z-index: 5;
+
+    opacity: 0; /* Start hidden */
+    visibility: hidden; /* Ensures it does not interfere with layout */
+    max-height: 0; /* Start with height 0 */
+    overflow: hidden; /* Prevent content from overflowing */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
 }
+
+.hamburguer_menu.show {
+    opacity: 1; /* Make it visible */
+    visibility: visible;
+    max-height: 80%; /* Adjust based on content size */
+    transform: translateY(0); /* Moves to original position */
+}
+
 .hamburguer_menu ul {
     list-style: none;
     padding: 0;
@@ -140,9 +152,6 @@ html, body{
 .hamburguer_menu li a {
     text-decoration: none;
     color: #333;
-}
-.hamburguer_menu.show {
-    display: block; /* Mostra o menu quando a classe "show" é adicionada */
 }
 .icon_search {
  	width: 30px;
@@ -173,49 +182,6 @@ html, body{
 }
 .tags_bar.show {
     display: block; /* Mostra o menu quando a classe "show" é adicionada */
-}
-.tags_bar .tag{
-	cursor: pointer;
-}
-.tags-input {
-    display: flex;
-    flex-wrap: wrap; /* Permite que as tags quebrem linha dentro do campo */
-    align-items: center;
-    padding: 5px; /* Espaço interno */
-    border: 1px solid #ccc; /* Borda do campo de entrada */
-    border-radius: 20px; /* Arredondamento */
-    background-color: white; /* Fundo do campo */
-}
-
-.selected-tags {
-    display: flex;
-    gap: 5px; /* Espaçamento entre as tags */
-    flex-wrap: wrap; /* Quebra de linha se necessário */
-}
-
-.selected-tag {
-    background-color: #e0e0e0; /* Fundo da tag */
-    border-radius: 15px; /* Arredondamento */
-    padding: 5px 10px; /* Espaçamento interno */
-    font-size: 14px; /* Tamanho do texto */
-    display: flex; /* Para alinhar o texto e o botão de fechar */
-    align-items: center;
-    cursor: default;
-}
-
-.selected-tag .remove-tag {
-    margin-left: 5px; /* Espaço entre o texto e o botão de fechar */
-    cursor: pointer;
-    font-weight: bold;
-    color: #ff0000; /* Cor do botão de fechar */
-}
-
-.tags-input input[type="text"] {
-    flex-grow: 1; /* O campo de texto ocupa o espaço restante */
-    border: none; /* Remove a borda do input */
-    outline: none; /* Remove o contorno ao focar */
-    font-size: 16px; /* Tamanho do texto */
-    padding: 5px; /* Espaço interno */
 }
 
 .column {
