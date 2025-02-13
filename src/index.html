@@ -27,28 +27,29 @@
 				</nav>
 			</div>	
 			<div class="search_bar" id="search_bar">
-				<form action="">
-					<input type="search" placeholder="Pesquisar Músicas" name="search" class="round" type="submit">
+				<form id="search_form" action="" method="">
+					<div class="tags_container" id="tags_container"></div>
+					<input type="search" id="search_input" placeholder="" name="search" class="round">
 					<button type="submit">
 						<i class="icon_search"></i>
 					</button>
 				</form>
 			</div>
-			<div class="tags_bar" id="tags_bar">
+			<div class="tags_list" id="tags_list">
 				<div class="column">
 						<ul>
-							<li class="tag">Lobinho</li>
-							<li class="tag">Escoteiro</li>
-							<li class="tag">Senior</li>
-							<li class="tag">Pioneiro</li>
+							<li class="tag" onclick="add_tag('Lobinho')">Lobinho</li>
+							<li class="tag" onclick="add_tag('Escoteiro')">Escoteiro</li>
+							<li class="tag" onclick="add_tag('Senior')">Senior</li>
+							<li class="tag" onclick="add_tag('Pioneiro')">Pioneiro</li>
 						</ul>
 					</div>
 					<div class="column">
 						<ul>
-							<li class="tag">Lobinho</li>
-							<li class="tag">Escoteiro</li>
-							<li class="tag">Senior</li>
-							<li class="tag">Pioneiro</li>
+							<li class="tag" onclick="add_tag('Repetição')">Repetição</li>
+							<li class="tag" onclick="add_tag('Caminhada')">Caminhada</li>
+							<li class="tag" onclick="add_tag('Grupo')">Grupo</li>
+							<li class="tag" onclick="add_tag('Gestual')">Gestual</li>
 						</ul>
 
 				</div>
