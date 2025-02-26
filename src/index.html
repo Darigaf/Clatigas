@@ -27,7 +27,7 @@
 				</nav>
 			</div>	
 			<div class="search_bar" id="search_bar">
-				<form id="search_form" action="" method="">
+				<form id="search_form" action="pesquisar.php" method="post">
 					<div class="tags_container" id="tags_container"></div>
 					<input type="search" id="search_input" placeholder="" name="search" class="round">
 					<button type="submit">
@@ -38,18 +38,21 @@
 			<div class="tags_list" id="tags_list">
 				<div class="column">
 						<ul>
-							<li class="tag" onclick="add_tag('Lobinho')">Lobinho</li>
-							<li class="tag" onclick="add_tag('Escoteiro')">Escoteiro</li>
-							<li class="tag" onclick="add_tag('Senior')">Senior</li>
-							<li class="tag" onclick="add_tag('Pioneiro')">Pioneiro</li>
+							<li class="tag tag_lobinho" onclick="add_tag('Lobinho')">Lobinho</li>
+							<li class="tag tag_escoteiro" onclick="add_tag('Escoteiro')">Escoteiro</li>
+							<li class="tag tag_senior" onclick="add_tag('Senior')">Senior</li>
+							<li class="tag tag_pioneiro" onclick="add_tag('Pioneiro')">Pioneiro</li>
+							<li class="tag tag_cerimonial" onclick="add_tag('Cerimonial')">Cerimonial</li>
+							<li class="tag tag_geral" onclick="add_tag('Geral')">Geral</li>
+							<li class="tag tag_classicas" onclick="add_tag('Clássicas')">Clássicas</li>
 						</ul>
 					</div>
 					<div class="column">
 						<ul>
-							<li class="tag" onclick="add_tag('Repetição')">Repetição</li>
-							<li class="tag" onclick="add_tag('Caminhada')">Caminhada</li>
-							<li class="tag" onclick="add_tag('Grupo')">Grupo</li>
-							<li class="tag" onclick="add_tag('Gestual')">Gestual</li>
+							<li class="tag tag_sub_categorias" onclick="add_tag('Repetição')">Repetição</li>
+							<li class="tag tag_sub_categorias" onclick="add_tag('Caminhada')">Caminhada</li>
+							<li class="tag tag_sub_categorias" onclick="add_tag('Grupo')">Grupo</li>
+							<li class="tag tag_sub_categorias" onclick="add_tag('Gestual')">Gestual</li>
 						</ul>
 
 				</div>

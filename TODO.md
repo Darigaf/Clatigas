@@ -28,9 +28,9 @@ Matheus:
 - Integrar Submit com pesquisar php
 - Mandar header para Arthur
 - Musica mais ouvidas (prototipo) FAZER
-- Botar acesso restrito no ultimo botao do menu de hamburguer FAZER
-- Deixar lista de tags Bonita
-- Adicionar cores nas tags
+- Botar acesso restrito no ultimo botao do menu de hamburguer Feito
+- Deixar lista de tags Bonita Feito
+- Adicionar cores nas tags Feito
 - Fazer nó embaixo do cabeçalho FAZER
 ##Funcao de Busca por nome
 ##Funcao de busca por texto
