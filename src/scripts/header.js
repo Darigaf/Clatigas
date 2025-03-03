@@ -25,11 +25,7 @@ search_bar.addEventListener('click', (event) => {
 document.addEventListener('click', (event) => {
 	if (!tags_list.contains(event.target) && !search_bar.contains(event.target)) {
 		tags_list.classList.remove('show'); // Remove a classe "show" para ocultar a div
-	}
-});
-
-
-
+	} });
 const tags = [];
 
 // Add tag to the list and update the display
