@@ -28,12 +28,18 @@ document.addEventListener('click', (event) => {
 	} });
 const tags = [];
 
-// Add tag to the list and update the display
-function add_tag(tag) {
-    if (!tags.includes(tag) && tag.trim() !== '') {
-        tags.push(tag);
+function add_tag(tagText, tagClass) {
+
+    // Check if the tagText is not empty and does not already exist in the tags array
+
+    if (tagText.trim() !== '' && !tags.some(tag => tag.text === tagText)) {
+
+        tags.push({ text: tagText, class: tagClass });
+
         update_tags_display();
+
     }
+
 }
 
 // Update the tags display inside the search bar and adjust the padding of the input
@@ -48,7 +54,10 @@ function update_tags_display() {
     tags.forEach(tag => {
         const tag_element = document.createElement('span');
         tag_element.className = 'tag';
-        tag_element.textContent = tag;
+	if(tag.class){
+		tag_element.classList.add(tag.class);
+	}
+        tag_element.textContent = tag.text;
         // Attach click event to each tag to remove it
         tag_element.addEventListener('click', () => {
             remove_tag(tag); // Remove tag when clicked
@@ -57,13 +66,13 @@ function update_tags_display() {
     });
 
     // Dynamically calculate the left padding based on the number of tags
-    const totalTagWidth = tags.reduce((acc, tag) => acc + (tag.length * 8 + 20), 0); // Adjust these values as needed
-    search_input.style.paddingLeft = (totalTagWidth + 20) + "px"; // 20px is for spacing after the last tag
+    const totalTagWidth = tags.reduce((acc, tag) => acc + (tag.text.length * 8 + 20), 0);
+    search_input.style.paddingLeft = (totalTagWidth + 20) + "px";
 }
 
 // Remove the tag from the list
 function remove_tag(tag) {
-    const index = tags.indexOf(tag);
+    const index = tags.findIndex(t => t.text === tag.text);
     if (index > -1) {
         tags.splice(index, 1);
         update_tags_display();
@@ -76,7 +85,8 @@ document.getElementById('search_form').addEventListener('submit', function (even
 
     // Append tags to the input value before submitting
     if (tags.length > 0) {
-        search_input.value = tags.join(', ') + (search_input.value.trim() ? ', ' + search_input.value.trim() : '');
+        search_input.value = tags.map(tag => tag.text).join(', ') +
+            (search_input.value.trim() ? ', ' + search_input.value.trim() : '');
     }
 });
 

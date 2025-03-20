@@ -25,8 +25,8 @@ Matheus:
 - Fazer menu de hamburguer ser puxado do lado esquerdo 
 - Adicionar seção de Musicas Mais Pesquisadas
 - Mandar para Página de Pesquisa FAZER
-- Integrar Submit com pesquisar php
-- Mandar header para Arthur
+- Integrar Submit com pesquisar php Mandado pro Arthur
+- Mandar header para Arthur Feito
 - Musica mais ouvidas (prototipo) FAZER
 - Botar acesso restrito no ultimo botao do menu de hamburguer Feito
 - Deixar lista de tags Bonita Feito

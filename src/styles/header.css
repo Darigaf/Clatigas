@@ -74,11 +74,30 @@
     height: 30px;
     margin: 10px;
 }
+.hamburguer_menu {
+    position: absolute;
+    background-color: #b21919;
+    border: 0px solid black;
+    border-radius: 0px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    top: 7.5%;
+    bottom: 0%;
+    left: 0.0%;
+    right: 80%;
+    transform: translate(-100%, 0);
+    z-index: 5;
+
+    opacity: 0; /* Start hidden */
+    visibility: hidden; /* Ensures it does not interfere with layout */
+    max-height: 80%; /* Start with height 0 */
+    overflow: hidden; /* Prevent content from overflowing */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
 .hamburguer_menu.show {
     opacity: 1; /* Make it visible */
     visibility: visible;
-    max-height: 80%; /* Adjust based on content size */
-    transform: translateY(0); /* Moves to original position */
+    transform: translateX(0); /* Moves to original position */
 }
 
 .hamburguer_menu ul {
@@ -99,25 +118,6 @@
     width: 100%;
     margin: 3px 0;
     transition: all 0.3s ease;
-}
-.hamburguer_menu {
-    position: absolute;
-    background-color: #b21919;
-    border: 0px solid black;
-    border-radius: 0px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    top: 7.5%;
-    bottom: 0%;
-    left: 0.0%;
-    right: 80%;
-    transform: translate(-2.5%, -9%);
-    z-index: 5;
-
-    opacity: 0; /* Start hidden */
-    visibility: hidden; /* Ensures it does not interfere with layout */
-    max-height: 0; /* Start with height 0 */
-    overflow: hidden; /* Prevent content from overflowing */
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
 }
 
 .tags_container {
