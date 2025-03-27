@@ -1,3 +1,14 @@
+:root {
+	--vermelho_header: #b21919;
+	--amarelo_lobinho: #ffb615;
+	--verde_escoteiro: #378930;
+	--grena_senior: #d60047;
+	--vermelho_pioneiro: #ff0000;
+	--laranja_cerimonial: #f87700;
+	--azul_geral: #3441f1;
+	--marrom_classicas: #b28e6d;
+	--cinza_sub_categorias: #868689;
+}
 .global_header{
 	display:flex;
 	justify-content: space-between;
@@ -133,9 +144,11 @@
 .tag {
   background-color: #f0f0f0;
   padding: 5px 10px;
-  border-radius: 15px;
+  border-radius: 20px;
   cursor: pointer;
   font-size: 14px;
+  color: white;
+  border: 0px solid black;
 }
 
 .tag:hover {
@@ -194,26 +207,26 @@
 	width: 50%;
 }
 .tag_lobinho {
-	background-color: #efde4a;
+	background-color: var(--amarelo_lobinho);
 }
 .tag_escoteiro {
-	background-color: #4e883e;
+	background-color: var(--verde_escoteiro);
 }
 .tag_senior{
-	background-color: #c42949;
+	background-color: var(--grena_senior);
 }
 .tag_pioneiro {
-	background-color: #ea3323;
+	background-color: var(--vermelho_pioneiro);
 }
 .tag_cerimonial {
-	background-color: #e97e30;
+	background-color: var(--laranja_cerimonial);
 }
 .tag_geral {
-	background-color: #3642e4;
+	background-color: var(--azul_geral);
 }
 .tag_classicas {
-	background-color: #ac8f71;
+	background-color: var(--marrom_classicas);
 }
 .tag_sub_categorias {
-	background-color: #868688;
+	background-color: var(--cinza_sub_categorias);
 }

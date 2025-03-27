@@ -22,7 +22,7 @@ Matheus:
 - Fazer nó embaixo do cabeçalho FAZER
 
 2025_02_12_Tarefas_Projeto
-- Fazer menu de hamburguer ser puxado do lado esquerdo 
+- Fazer menu de hamburguer ser puxado do lado esquerdo Feito
 - Adicionar seção de Musicas Mais Pesquisadas
 - Mandar para Página de Pesquisa FAZER
 - Integrar Submit com pesquisar php Mandado pro Arthur
@@ -32,10 +32,31 @@ Matheus:
 - Deixar lista de tags Bonita Feito
 - Adicionar cores nas tags Feito
 - Fazer nó embaixo do cabeçalho FAZER
+
+2025_02_10_Tarefas_Projeto
+- Fazer Footer?
+- Adicionar seção de Musicas Mais Pesquisadas
+- Adicionar borda nas tags Feito
+- Musica mais ouvidas (prototipo)
+- Fazer nó embaixo do cabeçalho 
+
+2025_02_26_Tarefas_Projeto
+- Fazer Rodapé, mesma cor do header, metade da espessura
+- Adicionar seção de Musicas Mais Pesquisadas
+- Aproximar a barra de tag da barra de pesquisa
+- Diminuir tamanho imagem fogueira
+- Musica mais pesquisadas(prototipo)
+- Fazer nó embaixo do cabeçalho 
+- Faixa Branca com nó
+- Ajustar Texto Clãcioneiro Descubra Mais
+- Barra de pesquisa, ao estar logado ser possível selecionar somente as trancadas
+- Tag Trancadas
 ##Funcao de Busca por nome
 ##Funcao de busca por texto
 ##Refinamento de busca por tags
+##Sugestões de pesquisa
 
 ##Musicas mais acessadas
 
 #Conta?
+
