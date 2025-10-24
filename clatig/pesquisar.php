@@ -12,7 +12,7 @@ include_once 'conexao.php';
     
     <body>
         <h1> Resultados: </h1>
-        <div id= "result">
+        <div id= "results">
             <?php
             // Recebendo a pesquisa e coluna escolhida
             $nome = $_POST['nome'] ?? '';
@@ -27,12 +27,14 @@ include_once 'conexao.php';
                 exit;
             }
             
-            $resultado = $conn->query($sql);
+            $resultado = $conn -> query($sql);
             
             if ($resultado->num_rows > 0) {
-                while ($row = $resultado->fetch_assoc()) {
+                while ($row = $resultado -> fetch_assoc()) {
+                    echo "<div class='result'>";
                     echo "<h3> <a href='" . $row['arquivo_musicas'] . "'>" . $row['nome_musicas'] . "</a> </h3>";
                     echo "<p>" . $row['letra_musicas'] . "</p>";
+                    echo "</div>";
                 }
             } else {
                 echo "<h1> Nenhuma música encontrada </h1>";
