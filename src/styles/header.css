@@ -163,6 +163,25 @@
 	background-image: url("assets/icons/search.png");
 }
 
+.submit_song_button{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.submit_song_button input[type="submit"] {
+	background-color: #b21919; /* same red as header */
+	color: white;
+	font-family: "Poppins", sans-serif;
+	font-size: 1.2em;
+	font-weight: 500;
+	padding: 12px 28px;
+	border: 1px solid white;
+	border-radius: 25px;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+	box-shadow: 0 9px 20px rgba(0, 0, 0, 0.1);
+}
 .tags_list {
     flex-grow: 1;
     display: flex;
