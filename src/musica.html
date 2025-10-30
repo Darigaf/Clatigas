@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Clatigas — Música</title>
+
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./styles/header.css">
+  <link rel="stylesheet" href="./styles/icons.css">
+  <link rel="stylesheet" href="./styles/musica.css">
+</head>
+<body>
+  <!-- será substituído pelo header real do index -->
+  <header id="site-header"></header>
+
+  <main class="song-page container">
+    <!-- (REMOVIDO) barra de categorias do topo -->
+
+    <section class="song-grid">
+      <article class="song-left">
+        <h1 class="song-title" id="song-title">Título</h1>
+
+        <!-- chips abaixo do título (coloridos via JS + CSS) -->
+        <div class="song-tags" id="song-tags"></div>
+
+        <pre class="song-lyrics" id="song-lyrics">Carregando letra…</pre>
+      </article>
+
+      <aside class="song-right">
+        <div class="video-shell">
+          <div class="video-ratio">
+            <div class="video-slot" id="video-slot" aria-label="Player de vídeo">
+              <div class="video-placeholder"><span class="play-triangle"></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="version-switch" id="version-switch"></div>
+      </aside>
+    </section>
+  </main>
+
+  <!-- 1) importa e substitui o header -->
+  <script src="./scripts/header-import.js" defer></script>
+  <!-- 2) scripts do header -->
+  <script src="./scripts/header.js" defer></script>
+  <script src="./scripts/script.js" defer></script>
+  <!-- 3) script específico desta tela -->
+  <script src="./scripts/musica.js" defer></script>
+</body>
+</html>

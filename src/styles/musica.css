@@ -1,0 +1,124 @@
+/* ========= PALETA & BASE ========= */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Inter:wght@400;500;600;700&display=swap');
+
+:root{
+  --brand:#992c26;         /* vermelho do mock */
+  --brand-2:#c74435;       /* vermelho claro (ativo) */
+  --ink:#1e2329;
+  --muted:#5a5f67;
+  --chip-outline:#b75850;
+  --chip-bg:#efefef;
+  --radius:22px;
+  --shadow: 0 4px 16px rgba(0,0,0,.06);
+}
+
+*{ box-sizing: border-box; }
+html,body{ margin:0; background:#fff; color:var(--ink); }
+body{ font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif; }
+
+.container{ max-width: 1180px; margin: 0 auto; padding: 18px 20px 40px; }
+
+/* ========= CATEGORIAS DO TOPO ========= */
+.song-categories{
+  display:flex; gap:12px; flex-wrap:wrap; align-items:center;
+  margin: 8px 0 26px;
+}
+.chip{
+  border:none; cursor:pointer; font-weight:700;
+  padding:.56rem 1.05rem; border-radius:999px;
+}
+.chip-outline{
+  background:#fff; color:var(--brand); border:2px solid var(--chip-outline);
+  transition: all .18s ease;
+}
+.chip-outline:hover{ background:var(--brand); color:#fff; }
+
+/* ========= GRID ========= */
+.song-grid{
+  display:grid; gap:34px; align-items:start;
+  grid-template-columns: 1.02fr .98fr;   /* proporção bem próxima ao mock */
+}
+
+/* ========= ESQUERDA ========= */
+.song-title{
+  font-family: Merriweather, serif;
+  font-weight: 900;
+  font-size: 44px;
+  margin: 6px 0 14px;
+  letter-spacing:.2px;
+}
+
+.song-tags{
+  display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px;
+}
+.song-tags .chip {
+  padding:.45rem .9rem;
+  border-radius:999px;
+  font-weight:800;
+  border:none;
+  color:#fff;
+}
+
+.song-tags .chip.chip--geral       { background:#3b5bfd; }   /* azul */
+.song-tags .chip.chip--lobo        { background:#f4b400; }   /* amarelo */
+.song-tags .chip.chip--escoteiro   { background:#16a34a; }   /* verde */
+.song-tags .chip.chip--senior      { background:#d81b60; }   /* magenta */
+.song-tags .chip.chip--pioneiro    { background:#f97316; }   /* laranja */
+.song-tags .chip.chip--cerimonial  { background:#e64a19; }   /* laranja escuro */
+.song-tags .chip.chip--classicas   { background:#b08900; }   /* dourado/marrom claro */
+.song-tags .chip.badge-dark{ background:#4b2c26; color:#fff; }
+.song-tags .chip.badge-beige{ background:#e7dfd6; color:#2f2a27; }
+.song-tags .chip.badge-blue{ background:#2b63ff; color:#fff; }
+.song-tags .chip.badge-gray{ background:#e9e9ee; color:#363a44; }
+.song-tags .chip.chip--cinza       { background:#6b7280; }   /* cinza */
+.song-tags .chip.chip--cifra       { background:#4b2c26; }   /* marrom escuro (não existe na busca, mantemos destaque) */
+
+.song-lyrics{
+  background:#fff;
+  border: 1px solid #ececec;
+  border-radius: var(--radius);
+  padding: 22px 28px;
+  white-space: pre-wrap;
+  line-height: 1.65;
+  color:#222;
+  box-shadow: var(--shadow);
+  min-height: 420px;
+}
+
+/* ========= DIREITA ========= */
+.video-shell{ width:100%; }
+.video-ratio{
+  position:relative; width:100%; padding-top:56.25%;   /* 16:9 */
+  border-radius: calc(var(--radius) - 4px);
+  border: 7px solid #b33a2f;                           /* moldura grossa */
+  box-shadow: 0 8px 18px rgba(179,58,47,.22);
+  background:#6f6f6f;                                  /* se não houver vídeo */
+  overflow:hidden;
+}
+.video-slot{ position:absolute; inset:0; display:grid; place-items:center; }
+.video-placeholder{ width:120px; height:120px; border-radius:18px; background:#9b9b9b; display:grid; place-items:center; }
+.play-triangle{
+  width:0; height:0; display:inline-block; margin-left:8px;
+  border-left:46px solid #d64435; border-top:26px solid transparent; border-bottom:26px solid transparent;
+}
+
+/* ========= VERSÕES ========= */
+.version-switch{
+  display:flex; gap:12px; justify-content:center; margin-top:16px;
+}
+.version-switch .chip{
+  background:#a33a2f; color:#fff; padding:.55rem 1.1rem;
+  border-radius: 999px; font-weight:800;
+  box-shadow: 0 3px 0 rgba(0,0,0,.08) inset;
+}
+.version-switch .chip.is-active{
+  background:var(--brand-2);
+  box-shadow: 0 0 0 3px rgba(199,68,53,.20) inset;
+}
+
+/* ========= RESPONSIVO ========= */
+@media (max-width: 1000px){
+  .song-grid{ grid-template-columns: 1fr; }
+  .song-right{ order:-1; }
+  .song-title{ font-size:38px; }
+}
